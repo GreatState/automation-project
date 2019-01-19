@@ -1,8 +1,8 @@
 ﻿using System;
+using AutomationProject.UITests.BaseClasses;
 using OpenQA.Selenium;
-using AutomationProject.BaseClasses;
 
-namespace AutomationProject.Helpers
+namespace AutomationProject.UITests.Helpers
 {
     public class GeneralHelper : Base
     {

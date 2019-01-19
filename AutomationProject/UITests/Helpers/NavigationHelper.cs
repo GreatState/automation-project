@@ -1,8 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using AutomationProject.UITests.BaseClasses;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using AutomationProject.BaseClasses;
 
-namespace AutomationProject.Helpers
+namespace AutomationProject.UITests.Helpers
 {
     public class NavigationHelper : Base
     {

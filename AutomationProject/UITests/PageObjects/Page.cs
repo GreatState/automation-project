@@ -1,8 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using AutomationProject.UITests.Helpers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using AutomationProject.Helpers;
 
-namespace AutomationProject.PageObjects
+namespace AutomationProject.UITests.PageObjects
 {
     public class Page
     {

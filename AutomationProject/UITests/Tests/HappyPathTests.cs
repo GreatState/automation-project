@@ -1,9 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AutomationProject.BaseClasses;
-using AutomationProject.Helpers;
-using AutomationProject.PageObjects;
+﻿using AutomationProject.UITests.BaseClasses;
+using AutomationProject.UITests.Helpers;
+using AutomationProject.UITests.PageObjects;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace AutomationProject.Tests
+namespace AutomationProject.UITests.Tests
 {
     [TestClass]
     public class HappyPathTests : Base

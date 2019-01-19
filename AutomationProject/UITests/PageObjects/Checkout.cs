@@ -1,9 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using AutomationProject.UITests.Helpers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using System;
-using AutomationProject.Helpers;
 
-namespace AutomationProject.PageObjects
+namespace AutomationProject.UITests.PageObjects
 {
     internal class Checkout : Page
     {
@@ -63,7 +62,6 @@ namespace AutomationProject.PageObjects
             // Generate valid unique email
             var emailAddress = GeneralHelper.GenerateUniqueEmail();
             // Enter email and proceed
-            Console.WriteLine(emailAddress);
             FormHelper.EnterText(EmailField, emailAddress);
             NavigationHelper.ClickElement(CreateAccountButton);
         }

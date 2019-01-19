@@ -1,12 +1,12 @@
-﻿using log4net;
+﻿using System;
+using System.IO;
+using AutomationProject.UITests.Helpers;
+using log4net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using System.IO;
-using AutomationProject.Helpers;
 
-namespace AutomationProject.BaseClasses
+namespace AutomationProject.UITests.BaseClasses
 {
     [TestClass]
     public class Base
@@ -57,7 +57,7 @@ namespace AutomationProject.BaseClasses
             var resultsDir = TestContext.TestResultsDirectory;
             var path = resultsDir + @"\Screenshots\Exceptions\" + date + "-" + time + @"\";
             if (TestContext.CurrentTestOutcome != UnitTestOutcome.Failed) return;
-            Log.Info("TEST FAILED");
+            Log.Fatal("TEST FAILED");
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);

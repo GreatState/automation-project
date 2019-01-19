@@ -1,7 +1,7 @@
-﻿using OpenQA.Selenium;
-using AutomationProject.Helpers;
+﻿using AutomationProject.UITests.Helpers;
+using OpenQA.Selenium;
 
-namespace AutomationProject.PageObjects
+namespace AutomationProject.UITests.PageObjects
 {
     internal class Product
     {
