@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Configuration;
 using System.IO;
+using AutomationProject.GeneralHelpers;
 using AutomationProject.UITests.Helpers;
 using log4net;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -12,6 +14,8 @@ namespace AutomationProject.UITests.BaseClasses
     public class Base
     {
         public static IWebDriver Driver;
+
+        public readonly string BaseUrl = ConfigurationManager.AppSettings["baseUrl"];
 
         // For additional logging with Log4Net
         public static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);

@@ -1,4 +1,5 @@
-﻿using AutomationProject.UITests.BaseClasses;
+﻿using System.Configuration;
+using AutomationProject.UITests.BaseClasses;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
@@ -10,10 +11,11 @@ namespace AutomationProject.UITests.Helpers
         {
         }
 
-        public void NavigateToUrl(string url)
+
+        public void NavigateToUrl(string path)
         {
-            Driver.Navigate().GoToUrl(url);
-            Log.Info("Navigated to: " + url);
+            Driver.Navigate().GoToUrl(BaseUrl + path);
+            Log.Info("Navigated to: " + BaseUrl + path);
         }
 
         public static void SwitchFrame(IWebElement element)

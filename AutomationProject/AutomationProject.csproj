@@ -55,6 +55,7 @@
       <HintPath>..\packages\RestSharp.106.6.7\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -66,7 +67,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenericHelpers\GeneralHelper.cs" />
+    <Compile Include="GeneralHelpers\GeneralHelper.cs" />
+    <Compile Include="Rest\RestPageObjects\Basket.cs" />
     <Compile Include="Rest\RestResponseContainers\AddToBasketResponse.cs" />
     <Compile Include="Rest\RestTests\ApiTest1.cs" />
     <Compile Include="Rest\RestBaseClasses\RestBase.cs" />

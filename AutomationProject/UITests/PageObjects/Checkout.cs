@@ -1,4 +1,5 @@
-﻿using AutomationProject.UITests.Helpers;
+﻿using AutomationProject.GeneralHelpers;
+using AutomationProject.UITests.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 

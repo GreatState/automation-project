@@ -2,7 +2,7 @@
 
 namespace AutomationProject.Rest.RestResponseContainers
 {
-    //created by pasting json response into http://json2csharp.com/
+    //created with http://json2csharp.com/
     public class Product
     {
         public int id { get; set; }

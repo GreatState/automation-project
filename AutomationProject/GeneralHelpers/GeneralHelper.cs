@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Configuration;
 using AutomationProject.UITests.BaseClasses;
 
-namespace AutomationProject.UITests.Helpers
+namespace AutomationProject.GeneralHelpers
 {
     public class GeneralHelper : Base
     {
+        private static readonly string FirstPartEmail = ConfigurationManager.AppSettings["firstPartEmail"];
+
         public static string GetTimeStamp(DateTime value, string format)
         {
             // Gets timestamp in defined format
@@ -17,10 +20,9 @@ namespace AutomationProject.UITests.Helpers
         {
             // Appends timestamp to first part of email to create unique address
             var timestamp = GetTimeStamp(DateTime.Now, "yyyyMMddHHmmssfff");
-            var emailAddress = "johnbuttone3+" + timestamp + "@gmail.com";
+            var emailAddress = FirstPartEmail + timestamp + "@gmail.com";
             Log.Info("Email address generated: " + emailAddress);
             return emailAddress;
         }
     }
 }
-

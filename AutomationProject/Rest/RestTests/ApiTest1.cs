@@ -15,39 +15,26 @@ namespace AutomationProject.Rest.RestTests
     public class ApiTests : RestBase
     {
         [TestMethod]
-        public void AddToBasketStatus()
+        public void AddToBasketVerifyDetails()
         {
-            var restObjects = new RestObjects(Client);
-            var response = restObjects.AddToBasket();
-            // assert status code
-            
-            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-        }
+            // Specify product details to add to basket
+            const int idProduct = 1;
+            const int qty = 2;
+            const int ipa = 4;
+            // Send request and get response
+            var response = Basket.AddToBasket(idProduct, qty, ipa);
 
-        [TestMethod]
-        public void AddToBasketVerifyIsJson()
-        {
-            var restObjects = new RestObjects(Client);
-            var response = restObjects.AddToBasket();
-            // assert status code
+            // Deserialize JSON response
             var deserializer = new JsonDeserializer();
             Log.Info(response.Content);
+            var obj = deserializer.Deserialize<RootObject>(response);
 
-            // parse the json response so that we can get at the key/value pairs
-            //JToken token = JObject.Parse(response);
-            //JObject jsonObject = JObject.Parse(response);
-            //var jsonObject = deserializer.Deserialize<Dictionary<string, string>>(response);
-            //Log.Info(jsonObject);
-
-            //Assert.AreEqual(1, x[0].id);
-
-            //if (jsonObject.ContainsKey("freeShipping"))
-            //{
-            //    Console.WriteLine("\nFOUND");
-            //}
-            //deserializer.Deserialize<Product<InventoryItem>>(response);
-
-            //Assert.AreEqual("json", response.ContentType);
+            // Verify response code
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+            // Verify product ID in response
+            Assert.AreEqual(idProduct, obj.products[0].id);
+            // Verify quantity in response
+            Assert.AreEqual(qty, obj.products[0].quantity);
         }
 
         [TestMethod]

@@ -18,7 +18,7 @@ namespace AutomationProject.UITests.Tests
             var page = new Page(Driver);
 
             // Navigate to homepage
-            navigationHelper.NavigateToUrl("http://automationpractice.com/index.php");
+            navigationHelper.NavigateToUrl("/");
             // Open quick view on first item on homepage
             homePage.ClickQuickView();
             // Select size 'M'
@@ -61,7 +61,7 @@ namespace AutomationProject.UITests.Tests
             var page = new Page(Driver);
 
             // Navigate to homepage
-            navigationHelper.NavigateToUrl("http://automationpractice.com/index.php");
+            navigationHelper.NavigateToUrl("/");
             // Open quick view on first item on homepage
             homePage.ClickQuickView();
             // Select size 'M'
