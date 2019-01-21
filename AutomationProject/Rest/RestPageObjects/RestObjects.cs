@@ -3,11 +3,11 @@ using RestSharp;
 
 namespace AutomationProject.Rest.RestPageObjects
 {
-    internal class ApiObjects : ApiBase
+    internal class RestObjects : RestBase
     {
         private readonly IRestClient _restClient;
 
-        public ApiObjects(IRestClient restClient)
+        public RestObjects(IRestClient restClient)
         {
             _restClient = restClient;
         }

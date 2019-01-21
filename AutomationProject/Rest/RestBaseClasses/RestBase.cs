@@ -9,7 +9,7 @@ using RestSharp;
 namespace AutomationProject.Rest.RestBaseClasses
 {
     [TestClass]
-    public class ApiBase
+    public class RestBase
     {
         public static RestClient Client;
         public TestContext TestContext { get; set; }
@@ -17,7 +17,7 @@ namespace AutomationProject.Rest.RestBaseClasses
         // For additional logging with Log4Net
         public static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        protected ApiBase()
+        protected RestBase()
         {
         }
 

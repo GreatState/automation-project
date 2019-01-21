@@ -24,7 +24,7 @@ namespace AutomationProject.UITests.PageObjects
         public void ClickQuickView()
         {
             //var isMobile = GeneralHelper.CheckElementPresent(Product1QuickViewMobile);
-            var isMobileOrTablet = GeneralHelper.ViewportWidthLessThan(1200);
+            var isMobileOrTablet = UIHelper.ViewportWidthLessThan(1200);
             if (isMobileOrTablet)
             {
                 NavigationHelper.ClickElement(Product1QuickViewMobile);

@@ -4,16 +4,8 @@ using OpenQA.Selenium;
 
 namespace AutomationProject.UITests.Helpers
 {
-    public class GeneralHelper : Base
+    public class UIHelper : Base
     {
-        public static string GetTimeStamp(DateTime value, string format)
-        {
-            // Gets timestamp in defined format
-            var timeStamp = value.ToString(format);
-            Log.Info("Timestamp generated: " + timeStamp);
-            return timeStamp;
-        }
-
         public static bool IsElementPresent(IWebElement element)
         {
             //if (element.Displayed.Equals(true))
@@ -33,15 +25,6 @@ namespace AutomationProject.UITests.Helpers
                 Log.Error("Could not locate element: " + element + "\nException: " + e);
                 return false;
             }
-        }
-
-        public static string GenerateUniqueEmail()
-        {
-            // Appends timestamp to first part of email to create unique address
-            var timestamp = GetTimeStamp(DateTime.Now, "yyyyMMddHHmmssfff");
-            var emailAddress = "johnbuttone3+" + timestamp + "@gmail.com";
-            Log.Info("Email address generated: " + emailAddress);
-            return emailAddress;
         }
 
         public static bool ViewportWidthLessThan(int width)

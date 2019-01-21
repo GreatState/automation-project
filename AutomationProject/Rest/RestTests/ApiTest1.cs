@@ -6,17 +6,19 @@ using AutomationProject.Rest.RestBaseClasses;
 using AutomationProject.Rest.RestPageObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RestSharp;
+using RestSharp.Serialization.Json;
+using AutomationProject.Rest.RestResponseContainers;
 
 namespace AutomationProject.Rest.RestTests
 {
     [TestClass]
-    public class ApiTests : ApiBase
+    public class ApiTests : RestBase
     {
         [TestMethod]
         public void AddToBasketStatus()
         {
-            var apiObjects = new ApiObjects(Client);
-            var response = apiObjects.AddToBasket();
+            var restObjects = new RestObjects(Client);
+            var response = restObjects.AddToBasket();
             // assert status code
             
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
@@ -25,11 +27,11 @@ namespace AutomationProject.Rest.RestTests
         [TestMethod]
         public void AddToBasketVerifyIsJson()
         {
-            var apiObjects = new ApiObjects(Client);
-            var response = apiObjects.AddToBasket();
+            var restObjects = new RestObjects(Client);
+            var response = restObjects.AddToBasket();
             // assert status code
-            //var deserializer = new JsonDeserializer();
-            Log.Info(response);
+            var deserializer = new JsonDeserializer();
+            Log.Info(response.Content);
 
             // parse the json response so that we can get at the key/value pairs
             //JToken token = JObject.Parse(response);
@@ -37,13 +39,13 @@ namespace AutomationProject.Rest.RestTests
             //var jsonObject = deserializer.Deserialize<Dictionary<string, string>>(response);
             //Log.Info(jsonObject);
 
-
+            //Assert.AreEqual(1, x[0].id);
 
             //if (jsonObject.ContainsKey("freeShipping"))
             //{
             //    Console.WriteLine("\nFOUND");
             //}
-            //deserializer.Deserialize<List<InventoryItem>>(response);
+            //deserializer.Deserialize<Product<InventoryItem>>(response);
 
             //Assert.AreEqual("json", response.ContentType);
         }

@@ -66,14 +66,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GenericHelpers\GeneralHelper.cs" />
     <Compile Include="Rest\RestResponseContainers\AddToBasketResponse.cs" />
     <Compile Include="Rest\RestTests\ApiTest1.cs" />
-    <Compile Include="Rest\RestBaseClasses\ApiBase.cs" />
+    <Compile Include="Rest\RestBaseClasses\RestBase.cs" />
     <Compile Include="UITests\BaseClasses\Base.cs" />
-    <Compile Include="UITests\Helpers\GeneralHelper.cs" />
+    <Compile Include="UITests\Helpers\UIHelper.cs" />
     <Compile Include="UITests\Helpers\FormHelper.cs" />
     <Compile Include="UITests\Helpers\NavigationHelper.cs" />
-    <Compile Include="Rest\RestPageObjects\ApiObjects.cs" />
+    <Compile Include="Rest\RestPageObjects\RestObjects.cs" />
     <Compile Include="UITests\PageObjects\HomePage.cs" />
     <Compile Include="UITests\PageObjects\Page.cs" />
     <Compile Include="UITests\PageObjects\Checkout.cs" />

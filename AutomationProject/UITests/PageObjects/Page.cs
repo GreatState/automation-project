@@ -30,10 +30,10 @@ namespace AutomationProject.UITests.PageObjects
         public void CheckSignedOut()
         {
             // Checks that Sign in button is present
-            var loginLinkStatus = GeneralHelper.IsElementPresent(SignInLink);
+            var loginLinkStatus = UIHelper.IsElementPresent(SignInLink);
             Assert.IsTrue(loginLinkStatus);
             // GeneralHelper.CheckElementPresent(SignInLink);
-            Assert.IsTrue(GeneralHelper.IsElementPresent(SignInLink));
+            Assert.IsTrue(UIHelper.IsElementPresent(SignInLink));
         }
 
         #endregion
