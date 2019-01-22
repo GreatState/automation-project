@@ -29,7 +29,7 @@ namespace AutomationProject.Rest.RestTests
             // Verify product ID in response
             Assert.AreEqual(idProduct, deserializedJson.products[0].id);
             // Verify quantity in response
-            //Assert.AreEqual(qty, obj.products[0].quantity);
+            Assert.AreEqual(qty, deserializedJson.products[0].quantity);
         }
 
         [TestMethod]
