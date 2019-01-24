@@ -72,7 +72,6 @@ namespace AutomationProject.Rest.RestBaseClasses
             Console.WriteLine(StaticToken);
         }
 
-        // in progress - not in use
         public object DeserializeJson(IRestResponse response)
         {
             var deserializer = new JsonDeserializer();

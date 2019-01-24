@@ -3,11 +3,11 @@ using AutomationProject.UITests.BaseClasses;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
-namespace AutomationProject.UITests.Helpers
+namespace AutomationProject.Hybrid.Helpers
 {
-    public class NavigationHelper : Base
+    public class HybridNavigationHelper : HybridBase
     {
-        public NavigationHelper(IWebDriver driver)
+        public HybridNavigationHelper(IWebDriver driver)
         {
         }
 

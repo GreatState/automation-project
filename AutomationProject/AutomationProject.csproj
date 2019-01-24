@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GeneralHelpers\GeneralHelper.cs" />
+    <Compile Include="Hybrid\Helpers\FormHelper.cs" />
+    <Compile Include="Hybrid\Helpers\HybridNavigationHelper.cs" />
+    <Compile Include="Hybrid\Helpers\UIHelper.cs" />
+    <Compile Include="Hybrid\HybridBaseClasses\HybridBase.cs" />
+    <Compile Include="Hybrid\HybridTests\HybridTest1.cs" />
+    <Compile Include="Hybrid\PageObjects\HybridBasket.cs" />
     <Compile Include="Rest\RestPageObjects\Basket.cs" />
     <Compile Include="Rest\RestResponseContainers\AddToBasketResponse.cs" />
     <Compile Include="Rest\RestTests\ApiTest1.cs" />

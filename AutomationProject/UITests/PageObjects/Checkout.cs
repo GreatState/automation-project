@@ -16,6 +16,9 @@ namespace AutomationProject.UITests.PageObjects
 
         #region PageObjects for Checkout
 
+        //temp for hybrid test
+        private IWebElement Product1Price => _driver.FindElement(By.ClassName("price"));
+
         private IWebElement ProceedToCheckoutButton => _driver.FindElement(By.LinkText("Proceed to checkout"));
         private IWebElement EmailField => _driver.FindElement(By.Id("email_create"));
         private IWebElement CreateAccountButton => _driver.FindElement(By.Id("SubmitCreate"));
@@ -124,6 +127,13 @@ namespace AutomationProject.UITests.PageObjects
             // Check page heading says 'ORDER CONFIRMATION'
             var pageHeadingText = CheckoutPageHeading.Text;
             Assert.IsTrue(pageHeadingText.Equals("ORDER CONFIRMATION"));
+        }
+
+        public void VerifyPriceInBasket()
+        {
+            // Check price in basket is correct - TEMP TEST
+            var product1Price = Product1Price.Text;
+            Assert.IsTrue(product1Price.Equals("$16.51"));
         }
 
         #endregion
