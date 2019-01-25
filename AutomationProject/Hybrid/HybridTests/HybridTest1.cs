@@ -45,7 +45,7 @@ namespace AutomationProject.Hybrid.HybridTests
         public void AddToBasketTest2()
         {
             var navigationHelper = new HybridNavigationHelper(Driver);
-            var basket = new HybridBasket(Client);
+            var hybridBasket = new HybridBasket(Client);
 
             // Initial webdriver navigation to homepage to get cookies etc.
             navigationHelper.NavigateToUrl("/index.php");
@@ -71,7 +71,7 @@ namespace AutomationProject.Hybrid.HybridTests
             const int ipa = 4;
 
             // Send request and get response
-            var response = basket.AddToBasket(idProduct, qty, ipa, staticToken);
+            var response = hybridBasket.HybridAddToBasket(idProduct, qty, ipa, staticToken);
             Log.Info(response.Content);
 
             // Deserialize JSON response

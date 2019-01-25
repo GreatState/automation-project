@@ -137,13 +137,13 @@ namespace AutomationProject.Hybrid.HybridBaseClasses
             return cookie;
         }
 
-        private static void GetStaticTokenFromRestResponse(IRestResponse response)
-        {
-            // Get token
-            var match = Regex.Match(response.Content, @"static_token \= \'([A-Za-z0-9\-]+)\'\;", RegexOptions.IgnoreCase);
-            StaticToken = match.Groups[1].Value;
-            Console.WriteLine(StaticToken);
-        }
+        //private static void GetStaticTokenFromRestResponse(IRestResponse response)
+        //{
+        //     Get token
+        //    var match = Regex.Match(response.Content, @"static_token \= \'([A-Za-z0-9\-]+)\'\;", RegexOptions.IgnoreCase);
+        //    StaticToken = match.Groups[1].Value;
+        //    Console.WriteLine(StaticToken);
+        //}
 
         public static string GetStaticTokenFromWebdriverSource(IWebDriver driver)
         {
